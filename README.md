@@ -11,6 +11,7 @@ This Hadoop MapReduce program can be run in hadoop clusters. It can run within d
 ```
 $ tar -cf HadoopInsight.tar HadoopInsight/
 ```
+* You shall start your docker container or ssh to your AWS, and run your hadoop cluster as you want. 
 
 * Move this **HadoopInsight.tar** file to where your hadoop root is
 

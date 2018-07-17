@@ -3,6 +3,7 @@
 # test the hadoop cluster
 
 #unpack the file
+echo -e "unpack the file"
 tar -xvf  HadoopInsight.tar
 
 #go to the directory
@@ -21,7 +22,7 @@ hdfs dfs -rm -r /output
 hdfs dfs -rm -r /intermediate
 
 # go to the directory
-cd HadoopInsight/src/main/java
+cd src/main/java
 
 # compile
 hadoop com.sun.tools.javac.Main *.java
