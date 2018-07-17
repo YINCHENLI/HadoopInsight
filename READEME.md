@@ -1,4 +1,0 @@
-# Hadoop 
-Insight data
-;
-
