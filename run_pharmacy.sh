@@ -1,14 +1,27 @@
 #!/bin/bash
 
 # test the hadoop cluster
-cd src
 
-# delete hdfs
+#unpack the file
+tar -xvf  HadoopInsight.tar
+
+#go to the directory
+cd HadoopInsight
+
+#make an input directory
+echo -e "making an input directory"
+hdfs dfs -mkdir /input
+
+#put the data.txt file to hdfs input file
+echo -e "putting the file to input directory"
+hdfs dfs -put input/* /input 
+
+# delete hdfs if previously created
 hdfs dfs -rm -r /output
 hdfs dfs -rm -r /intermediate
 
 # go to the directory
-cd InsightDataPharmacy/src/main/java
+cd HadoopInsight/src/main/java
 
 # compile
 hadoop com.sun.tools.javac.Main *.java
